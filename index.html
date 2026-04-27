@@ -76,11 +76,6 @@
     <div class="progress-bar">
         <div class="progress" id="progress"></div>
     </div>
-    
-    <div class="info">
-        <div id="status">Загрузка...</div>
-        <div id="server-name" style="font-size: 18px; margin-top: 10px; opacity: 0.8;"></div>
-    </div>
 
     <script>
         var slides = document.querySelectorAll('.slide');
@@ -90,7 +85,7 @@
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }, 4000);
+        }, 10000);
         
         window.GameDetails = function(servername, serverurl, mapname, maxplayers, steamid, gamemode) {
             document.getElementById('server-name').innerText = servername;
